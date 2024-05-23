@@ -1,0 +1,117 @@
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+nav{
+    background-color: rgb(216, 172, 131);
+}
+.nav-item{
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+}
+.sitetitle{
+    font-family: "Homemade Apple", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+    background-color: rgb(105, 53, 28);
+    background-image: url('Bisons_darkened.png');
+    object-fit: scale-down;
+    background-attachment:fixed;
+    background-position: center right;
+    
+    max-width: 100%;
+    max-height: 100%;
+   }
+
+.toparea{
+    margin-top: 400px;
+}
+.spacefornavbar{
+    margin-top: 70px;
+}
+
+.mainarea{
+    background-color: rgb(255, 255, 255);
+   
+    padding: 5px;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+.titletext{
+    font-family: "Homemade Apple", cursive;
+  font-weight: 400;
+  font-style: normal;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 3px 4px 4px rgb(0, 0, 0)
+}
+
+.titletext2{
+    text-align: center;
+    color: rgb(216, 172, 131);
+    
+}
+.titletext3{
+    font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 3px 4px 4px rgb(0, 0, 0)
+}
+.innerpic{
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-radius: 15px;
+    -moz-border-radius: 15px
+}
+.vl {
+    position: absolute;
+    left: 50%;
+    border-left: 3px solid rgb(216, 172, 131);
+    height: 30%; /*ask about scaling this*/
+   
+  }
+
+  ::-webkit-scrollbar { 
+    display:none; 
+}
+
+
+
+
+/*card styling for national parks */
+
+#results {
+    display: none;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+    
+}
+.card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 8px 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+.card-body {
+    margin-top: 8px;
+    font-size: 14px;
+}
