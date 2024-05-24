@@ -53,6 +53,8 @@ document.addEventListener("DOMContentLoaded", init);
             "Trail": ["Trail"],
             "Parkway": ["Parkway"]
         };
+
+        //Function to make cards
         function createCard(park) {
             const col = document.createElement('div');
             col.className = 'col-md-4 mb-3';
@@ -85,43 +87,43 @@ document.addEventListener("DOMContentLoaded", init);
         }
 
         function displayAllResults() {
-            resultsContainer.innerHTML = ''; // Clear previous results
+            resultsContainer.innerHTML = ''; 
             nationalParksArray.forEach(park => {
                 const card = createCard(park);
                 resultsContainer.appendChild(card);
             });
             resultsContainer.style.display = 'flex';
         }
-
+            //searchbar
         function filterResults(query) {
             const filteredData = nationalParksArray.filter(park => 
                 park.LocationName.toLowerCase().includes(query.toLowerCase())
             );
-            resultsContainer.innerHTML = ''; // Clear previous results
+            resultsContainer.innerHTML = ''; 
             filteredData.forEach(park => {
                 const card = createCard(park);
                 resultsContainer.appendChild(card);
             });
             resultsContainer.style.display = filteredData.length > 0 ? 'flex' : 'none';
         }
-
+            //search by state
         function filterResultsByState(state) {
             const filteredData = nationalParksArray.filter(park => 
                 park.State.toLowerCase() === state.toLowerCase()
             );
-            resultsContainer.innerHTML = ''; // Clear previous results
+            resultsContainer.innerHTML = ''; 
             filteredData.forEach(park => {
                 const card = createCard(park);
                 resultsContainer.appendChild(card);
             });
             resultsContainer.style.display = filteredData.length > 0 ? 'flex' : 'none';
         }
-
+            //search by type of park 
         function filterResultsByParkType(keyword) {
             const filteredData = nationalParksArray.filter(park => 
                 park.LocationName.toLowerCase().includes(keyword.toLowerCase())
             );
-            resultsContainer.innerHTML = ''; // Clear previous results
+            resultsContainer.innerHTML = ''; 
             filteredData.forEach(park => {
                 const card = createCard(park);
                 resultsContainer.appendChild(card);
@@ -158,7 +160,7 @@ document.addEventListener("DOMContentLoaded", init);
                     displayAllResults();
                 }
             });
-
+                //click off to clear results
             document.addEventListener('click', (e) => {
                 if (!searchBar.contains(e.target) && !resultsContainer.contains(e.target) && !stateFilter.contains(e.target) && !parkTypesFilter.contains(e.target)) {
                     resultsContainer.style.display = 'none';
@@ -166,7 +168,7 @@ document.addEventListener("DOMContentLoaded", init);
             });
 
             viewAllButton.addEventListener('click', (e) => {
-                e.stopPropagation(); // Add this line to prevent the event from bubbling up
+                e.stopPropagation(); 
                 displayAllResults();
             });
         }

@@ -58,23 +58,29 @@
         <main>
 
           <div class="spacefornavbar"></div>
-          <h1 class="titletext3">Search</h1>
-          <div class="container">
+          <h1 class="titletext3">Search Parks</h1>
+  <div class="container searchstuff">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-8" align="center">
           <select id="statefilter">
             <option for="statefilter" selected disabled>Choose a State:</option>
         </select>
-        <select id="parktypes">
+        <select id="parktypes" class="m-2">
           <option for="parktypes" selected disabled>Types of Parks:</option>
-      </select></div><br>
-      <div class="container">
+      </select><br>
+      
       <input type="text" id="searchBar" placeholder="Search by park name">
-      <button id="viewAllButton" class="btn btn-outline-light" >View All</button>
+      <button id="viewAllButton" class="btn btn-outline-light viewallbutton m-2" >View All</button>
+      <div class="col-2"></div>
     </div>
+    </div>
+  </div>
       <div class="container">
           <div id="results" class="row mt-3"></div>
       </div>
       
-    </div>
+ 
      
 
 
